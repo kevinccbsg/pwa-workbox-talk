@@ -4,28 +4,29 @@ body {
 	height: 100vh;
 }
 
-.box {
-	background-color: blue;
-	height: 150px;
-	width: 100%;
-}
-
 .container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: 20vh 1fr 20vh 20vh;
-	grid-gap: 10px;
 	height: 100vh;
 }
 
-.red-box {
-	background-color: red;
-	grid-column: 1 / 3;
-	grid-row: 1 / 3;
+header,
+footer,
+main,
+aside {
+	width: 100%;
 }
 
-.green-box {
+header {
+	background-color: blue;
+}
+
+footer {
+	background-color: yellow;
+}
+
+main {
 	background-color: green;
-	grid-column: 1 / 2;
-	grid-row: 2 / 4;
+}
+
+aside {
+	background-color: red;
 }
