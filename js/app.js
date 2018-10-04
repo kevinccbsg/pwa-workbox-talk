@@ -9,7 +9,7 @@ const articleDataHTML = (data) => {
         <img class="logo-image" src="${data.thumbnail_image}" />
         <h2>${data.title}</h2>
         <p>${data.artist}</p>
-        <img src="${data.image}"" />
+        <img class="big-image" src="${data.image}"" />
     </div>
   `;
 };
