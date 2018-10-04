@@ -7,12 +7,12 @@ body {
 .container {
 	height: 100vh;
 	display: grid;
-	grid-template-columns: 20vh 1fr;
+	grid-template-columns: 20vh 20vh 1fr;
 	grid-template-rows: 10vh 1fr 10vh;
 	grid-template-areas: 
-		"header header"
-		"aside main"
-		"footer footer";
+		"header header header"
+		"aside . main"
+		"footer footer footer";
 }
 
 header,
