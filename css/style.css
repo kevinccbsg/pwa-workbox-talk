@@ -8,6 +8,10 @@ body {
 	height: 100vh;
 }
 
+.album {
+  background-color: #FFF;
+}
+
 .album,
 .content-image,
 .album img {
@@ -50,6 +54,3 @@ main {
 	background-color: #e8e8e8;
 }
 
-aside {
-	background-color: red;
-}
