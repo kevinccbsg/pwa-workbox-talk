@@ -6,13 +6,21 @@ body {
 
 .container {
 	height: 100vh;
-	display: grid;
-	grid-template-columns: 20vh 20vh 1fr;
-	grid-template-rows: 10vh 1fr 10vh;
-	grid-template-areas: 
-		"header header header"
-		"aside . main"
-		"footer footer footer";
+}
+
+.album,
+.content-image,
+.album img {
+  width: 100%;
+}
+
+.logo-image {
+  border-radius: 50%;
+}
+
+.album h2,
+.album p {
+  margin: 0;
 }
 
 header,
@@ -22,22 +30,26 @@ aside {
 	width: 100%;
 }
 
+* {
+  font-family: verdana;
+}
+
 header {
-	background-color: blue;
-	grid-area: header;
+	background-color: #272727;
+  color: #FAFAFA;
+  text-align: center;
 }
 
 footer {
-	background-color: yellow;
-	grid-area: footer;
+	background-color: #272727;
+  color: #FAFAFA;
+  text-align: center;
 }
 
 main {
-	background-color: green;
-	grid-area: main;
+	background-color: #e8e8e8;
 }
 
 aside {
 	background-color: red;
-	grid-area: aside;
 }
