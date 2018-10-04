@@ -6,6 +6,13 @@ body {
 
 .container {
 	height: 100vh;
+	display: grid;
+	grid-template-columns: 20vh 1fr;
+	grid-template-rows: 10vh 1fr 10vh;
+	grid-template-areas: 
+		"header header"
+		"aside main"
+		"footer footer";
 }
 
 header,
@@ -17,16 +24,20 @@ aside {
 
 header {
 	background-color: blue;
+	grid-area: header;
 }
 
 footer {
 	background-color: yellow;
+	grid-area: footer;
 }
 
 main {
 	background-color: green;
+	grid-area: main;
 }
 
 aside {
 	background-color: red;
+	grid-area: aside;
 }
