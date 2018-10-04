@@ -20,9 +20,9 @@ git checkout 01-float-solution
  + 02-flex-solution
  + 03-basic-grid
  + 03-basic-grid-solution
- + 04-real-example
- + 04-real-example-solution
- + 05-grid-areas
- + 05-grid-areas-solution
+ + 04-grid-areas
+ + 04-grid-areas-solution
+ + 05-real-example
+ + 05-real-example-solution
 
 
