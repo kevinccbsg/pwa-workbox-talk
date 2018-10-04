@@ -9,3 +9,19 @@ body {
 	width: 200px;
 	margin: 10px;
 }
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 60vh;
+	/*flex-direction: column;*/
+}
+
+.box-top {
+	align-self: flex-start;
+}
+
+.box-bottom {
+	align-self: flex-end;
+}
