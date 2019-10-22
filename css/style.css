@@ -61,6 +61,10 @@ footer {
   align-items: center;
 }
 
+#myButton {
+  padding: 15px;
+}
+
 main {
 	background-color: #e8e8e8;
   grid-column-start: 2;
