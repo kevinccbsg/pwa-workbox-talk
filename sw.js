@@ -40,8 +40,18 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerRoute(
+  // Cache json locales.
+  /\.json$/,
+  // Use cache but update in the background.
+  new workbox.strategies.StaleWhileRevalidate({
+    // Use a custom cache name.
+    cacheName: 'json-cache',
+  }),
+);
+
+workbox.routing.registerRoute(
   // Cache image files.
-  /\.(?:png|jpg|jpeg|svg|gif)$/,
+  /https:\/\/(images-na.ssl-images-amazon|i.imgur).com\/.*.(?:png|jpg|jpeg|svg|gif)$/,
   // Use the cache if it's available.
   new workbox.strategies.CacheFirst({
     // Use a custom cache name.
@@ -59,7 +69,7 @@ workbox.routing.registerRoute(
 
 workbox.routing.registerRoute(
   // cache API routes with cache header and status code 200
-  /\/api\/.*/,
+  /https:\/\/rallycoding.herokuapp.com\/api\/music_albums/,
   new workbox.strategies.NetworkFirst({
     cacheName: 'api-cache',
     plugins: [
