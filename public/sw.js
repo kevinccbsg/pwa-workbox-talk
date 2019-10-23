@@ -1,11 +1,7 @@
 importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js');
 
-workbox.routing.registerNavigationRoute('/index.html');
-
 workbox.precaching.precacheAndRoute([
-  { url: '/index.html', revision: '383676' },
-  // { url: /static\/media\/*\.(svg|woff|eot|ttf)/, revision: '383676' },
-  // { url: /locales\/*\.json/, revision: '383676' },
+  { url: '/' },
 ]);
 
 workbox.routing.registerRoute(
@@ -53,7 +49,7 @@ workbox.routing.registerRoute(
   // Cache image files.
   /https:\/\/(images-na.ssl-images-amazon|i.imgur).com\/.*.(?:png|jpg|jpeg|svg|gif)$/,
   // Use the cache if it's available.
-  new workbox.strategies.CacheFirst({
+  new workbox.strategies.StaleWhileRevalidate({
     // Use a custom cache name.
     cacheName: 'image-cache',
     plugins: [
@@ -72,14 +68,6 @@ workbox.routing.registerRoute(
   /https:\/\/rallycoding.herokuapp.com\/api\/music_albums/,
   new workbox.strategies.NetworkFirst({
     cacheName: 'api-cache',
-    plugins: [
-      new workbox.cacheableResponse.Plugin({
-        statuses: [200],
-        headers: {
-          'X-Is-Cacheable': 'true',
-        },
-      }),
-    ],
   }),
 );
 

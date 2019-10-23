@@ -10,8 +10,10 @@ const app = express();
 app.use(helmet());
 app.use(compression());
 app.use(morgan('combined'));
-app.use(express.static('public'));
-app.get('/*', (req, res) => {
+
+app.use(express.static(join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
   res.sendFile(join(__dirname, 'public', 'index.html'));
 });
 
