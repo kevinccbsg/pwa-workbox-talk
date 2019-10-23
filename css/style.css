@@ -39,19 +39,30 @@ aside {
 }
 
 header {
-	background-color: #272727;
+	background: linear-gradient(90deg, rgba(252,190,19,1) 0%, rgba(233,67,58,1) 100%);
   color: #FAFAFA;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
 	background-color: #272727;
+  background: linear-gradient(90deg, rgba(233,67,58,1) 0%, rgba(252,190,19,1) 100%);
   color: #FAFAFA;
   text-align: center;
   grid-column-start: 1;
   grid-column-end: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#myButton {
+  padding: 15px;
 }
 
 main {
