@@ -83,18 +83,3 @@ workbox.routing.registerRoute(
   }),
 );
 
-/* Notification example */
-self.addEventListener('notificationclick', function(e) {
-  var notification = e.notification;
-  var primaryKey = notification.data.primaryKey;
-  var action = e.action;
-
-  console.log('asdasdasd');
-
-  if (action === 'close') {
-    notification.close();
-  } else {
-    console.log('Clicked');
-    notification.close();
-  }
-});
