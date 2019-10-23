@@ -1,0 +1,33 @@
+{
+  "name": "pwa-workbox-talk",
+  "version": "1.0.0",
+  "description": "CSS grid, workbox and PWA examples",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "NODE_ENV=production node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kevinccbsg/pwa-workbox-talk.git"
+  },
+  "keywords": [
+    "workbox",
+    "pwa",
+    "service",
+    "worker",
+    "node"
+  ],
+  "author": "Kevin Julián Martínez Escobar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinccbsg/pwa-workbox-talk/issues"
+  },
+  "homepage": "https://github.com/kevinccbsg/pwa-workbox-talk#readme",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "morgan": "^1.9.1"
+  }
+}
